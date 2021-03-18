@@ -45,6 +45,13 @@ p {
 	display: block;
 	margin-left: 100px;
 }
+.read dl{
+	font-family: "Verdana","Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	font-size: 18px;
+	color: #333;
+	display: block;
+	margin-left: 100px;
+}
 p.intro {
 	margin: 12px 0 0;
 	line-height: 24px;
