@@ -33,11 +33,37 @@ h5 {
 p {
 	font-size: 18px;
 }
+
+/*DL, DT, DD TAGS LIST DATA*/
+dl {
+    margin-bottom:5px;
+}
+ 
+dl dt {
+    /*background:#5f9be3;*/
+    /*color:#fff;*/
+    float:left; 
+    font-weight:normal;
+    margin-right:10px; 
+    padding:5px;  
+    width:100px; 
+	font-size: 18px;
+}
+ 
+dl dd {
+    margin:2px 0; 
+    padding:5px 0;
+	font-size: 18px;	
+	display: block;
+	margin-left: 130px;
+}
+
 .read p{
 	font-family: 'Raleway',"Verdana","Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	font-size: 18px;
 	color: #333;
 }
+/*
 .read dd{
 	font-family: 'Raleway',"Verdana","Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	font-size: 18px;
@@ -45,6 +71,7 @@ p {
 	display: block;
 	margin-left: 100px;
 }
+*/
 p.intro {
 	margin: 12px 0 0;
 	line-height: 24px;
