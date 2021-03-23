@@ -83,9 +83,9 @@ a:hover, a:focus {
 	text-decoration: none;
 	color: #222;
 }
-ul, ol {
+/*ul, ol {
 	list-style: none;
-}
+}*/
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -107,6 +107,11 @@ ul, ol {
 	padding: 0;
 	webkit-padding: 0;
 	moz-padding: 0;
+	font-size: 18px	
+}
+li{
+  margin: 10px 0;
+  color: #333;
 }
 hr {
 	height: 2px;
