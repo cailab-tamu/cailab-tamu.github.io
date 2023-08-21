@@ -1,14 +1,29 @@
 AAv=[37602516,37246643,36787742,36181835,35892093,35763934,35565312,35510185,35434695,35205415,35187673,35170983,35005773,34815312,34320637,33964465,33462362,33336197,32873716,32840568,32404926,32245959,31861624,31697351,31273215,31127088,29895639,29589560,29577871,29554127,29040376,28853484,28171656,27549615,27536236,27131873,26588844,26535622,25617623,25330172,25309574,25222615,24901238,24398800,24298061,24027418,23851338,23613906,23225993,23150607,23051181,22131218,21300845,21282640,21224255,20978139,20937604,20828396,20718860,20624743,20333184,19455210,19283063,19148272,18841251,18310616,16755356,16714021,15780146,15613317,14675758,12640520,];
 % AAv=AAv(end:-1:1);
-% Highlighted=[37246643,36787742,35510185,33336197,31861624,31697351,31273215,25617623,24298061,23150607];
+Highlighted=[37246643,36787742,35510185,33336197,31861624,31697351,31273215,25617623,24298061,23150607];
 % AAv=setdiff(AAv,Highlighted,'stable');
 %AAv=Highlighted;
 
 fid=fopen('publicationlist_all.html','w');
+
+
+fprintf(fid,"<style>\n");
+fprintf(fid,"li.highlighted{\n");
+fprintf(fid,"    background-color: #FF851B;\n");
+fprintf(fid,"}\n");
+fprintf(fid,"li.even{\n");
+fprintf(fid,"    background-color: #FF4136;\n");
+fprintf(fid,"}\n");
+fprintf(fid,"</style>\n");
+
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
         
 for k=1:length(AAv)
     AAv(k)
+    
+    ishighlighted=ismember(AAv(k),Highlighted);
+
+
     a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%d/?format=pubmed',AAv(k)));
     b=extractHTMLText(a);
     % c=strtrim(string(strsplit(b,'\n')'));
@@ -48,7 +63,11 @@ for k=1:length(AAv)
     end
 
 
-    fprintf(fid,"\n<li>");
+    if ishighlighted
+        fprintf(fid,"\n<li class=""highlighted"">");
+    else
+        fprintf(fid,"\n<li>");
+    end
     
     if length(s_au)==1
         fprintf(fid,"%s.\n",s_au);
@@ -74,8 +93,8 @@ fclose(fid);
 %{
 
 
-<li>Roman-Vicharra C, Cai JJ. <strong>Quantum gene regulatory networks</strong>.
-  <em><u>npj Quantum Information</u></em>. 2023, 9(67). <a
+<li class="highlighted">Roman-Vicharra C, Cai JJ. <strong>Quantum gene regulatory networks</strong>.
+  <em><u>NPJ Quantum Inf.</u></em>. 2023, 9(67). <a
     href="https://www.nature.com/articles/s41534-023-00740-6">https://doi.org/10.1038/s41534-023-00740-6</a>.</li>
 
 <li>Willis SC, Saenz DE, Wang G, Hollenbeck CM, Portnoy DS, Cai JJ, Winemiller KO.
