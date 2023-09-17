@@ -6,6 +6,8 @@ Highlighted=[37246643,36787742,35510185,33336197,31861624,31697351,31273215,2561
 
 fid=fopen('publicationlist_all.html','w');
 
+fprintf(fid,"<script async src=""https://badge.dimensions.ai/badge.js"" charset=""utf-8""></script>\n");
+fprintf(fid,"<script type=""text/javascript"" src=""https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js""></script>\n");
 
 fprintf(fid,"<style>\n");
 fprintf(fid,"li.highlighted{\n");
@@ -83,7 +85,20 @@ for k=1:length(AAv)
         fprintf(fid,"doi: <a href=""https://doi.org/%s"">%s</a>.\n",s_doi(1),s_doi(1));
     end
 
-    fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
+    %fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
+
+    if ~strcmp("36787742",s_pmid)
+        fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
+    
+    else
+        fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.\n",s_pmid,s_pmid);
+        fprintf(fid,"PDF <a href=""Yang-2023-scTenifoldXct.pdf""><i class=""fa fa-file-pdf-o""></i></a></li>\n");
+    end
+    if ~isempty(s_doi)
+        %fprintf(fid,"<div class=""altmetric-embed"" data-doi=""%s""></div>\n",s_doi(1));
+        fprintf(fid,"<span class=""__dimensions_badge_embed__"" data-doi=""%s"" data-style=""small_rectangle""></span><br>\n",s_doi(1));
+    end    
+
 end
 fprintf(fid,"</ol>\n");
 fclose(fid);
