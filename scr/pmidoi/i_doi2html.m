@@ -35,6 +35,8 @@ if nargin<2, ishighlighted=false; end
     s_ti=aaa(a,'citation_title');
     s_j=aaa(a,'citation_journal_abbrev');
 
+    s_j=strrep(s_j,'.','');
+
 
     s_t=aaa(a,'citation_publication_date');
     if isempty(s_t)
@@ -48,7 +50,7 @@ if nargin<2, ishighlighted=false; end
     s_p2=aaa(a,'citation_lastpage');
     
 
-    s=sprintf("%s<strong>%s</strong>\n",s,s_ti);
+    s=sprintf("%s<strong>%s.</strong>\n",s,s_ti);
     s=sprintf("%s<em><u>%s</u></em>.\n",s,s_j);
     if ~isempty(s_p1)
         
