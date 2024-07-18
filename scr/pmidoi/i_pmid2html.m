@@ -66,13 +66,13 @@ if nargin<2, ishighlighted=false; end
     s=sprintf("%s%s.\n",s,s_t);
 
     if ~isempty(s_doi)
-        s=sprintf("%sdoi:<a href=""https://doi.org/%s"">%s</a>.\n",s,s_doi(1),s_doi(1));
+        s=sprintf("%sdoi: <a href=""https://doi.org/%s"">%s</a>.\n",s,s_doi(1),s_doi(1));
     end
 
     %fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
 
     
-    s=sprintf("%sPMID:<a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s,s_pmid,s_pmid);
+    s=sprintf("%sPMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s,s_pmid,s_pmid);
     
     if ~isempty(s_doi)        
         s=sprintf("%s<span class=""__dimensions_badge_embed__"" data-doi=""%s"" data-style=""small_rectangle""></span><br>\n",s,s_doi(1));
