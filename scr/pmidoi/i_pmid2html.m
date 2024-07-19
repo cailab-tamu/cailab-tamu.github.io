@@ -76,5 +76,7 @@ if nargin<2, ishighlighted=false; end
     
     if ~isempty(s_doi)        
         s=sprintf("%s<span class=""__dimensions_badge_embed__"" data-doi=""%s"" data-style=""small_rectangle""></span><br>\n",s,s_doi(1));
+    else
+        s=sprintf("%s<br>\n",s);
     end
 end
