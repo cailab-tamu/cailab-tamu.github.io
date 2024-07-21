@@ -27,23 +27,7 @@ Highlighted=["10.1038/s41534-023-00740-6","37246643","36787742",...
              "25617623","24298061","23150607"];
 
 fid=fopen('publicationlist.html','w');
-
-% fprintf(fid,"<script async src=""https://badge.dimensions.ai/badge.js"" charset=""utf-8""></script>\n");
-% fprintf(fid,"<script type=""text/javascript"" src=""https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js""></script>\n");
-% fprintf(fid,"<style>\n");
-% fprintf(fid,"li.highlighted{\n");
-% fprintf(fid,"    background-color: #FF851B;\n");
-% fprintf(fid,"}\n");
-% fprintf(fid,"li.even{\n");
-% fprintf(fid,"    background-color: #FF4136;\n");
-% fprintf(fid,"}\n");
-% fprintf(fid,"</style>\n");
-%fprintf(fid,"<div class=""container"">\n");
-%fprintf(fid,"<div class=""col-xs-12"">\n");
-
-
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
-        
 for k=1:length(AAv)
     AAv(k)
     pause(1)
@@ -58,3 +42,22 @@ for k=1:length(AAv)
 end
 fprintf(fid,"</ol>\n");
 fclose(fid);
+
+
+fid=fopen('selectpublications.html','w');
+fprintf(fid,"<h3>Select Publications</h3>\n<ol>");
+for k=1:length(Highlighted)
+    Highlighted(k)
+    pause(1)
+    ishighlighted = ~ismember(Highlighted(k),Highlighted);
+    if contains(Highlighted(k),'/')
+        s=i_doi2html(Highlighted(k), ishighlighted);
+    else
+        s=i_pmid2html(Highlighted(k), ishighlighted);
+    end
+   fprintf(fid,"%s",s);
+end
+fprintf(fid,"</ol>\n");
+fclose(fid);
+
+
