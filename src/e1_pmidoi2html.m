@@ -26,7 +26,7 @@ Highlighted=["10.1038/s41534-023-00740-6","37246643","36787742",...
              "35510185","33336197","31861624","31697351","31273215",...
              "25617623","24298061","23150607"];
 
-fid=fopen('publicationlist.html','w');
+fid=fopen('publication.html','w');
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
 for k=1:length(AAv)
     AAv(k)
