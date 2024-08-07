@@ -11,68 +11,14 @@ for k=1:length(AAv)
     AAv(k)
     a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%d/?format=pubmed',AAv(k)));
     b=extractHTMLText(a);
-    % c=strtrim(string(strsplit(b,'\n')'));
     c=string(strsplit(b,'\n')');
-    %s_pmid=c(startsWith(c,'FAU'));
-    
-    %s_so=c(startsWith(c,'SO'));
-    %if find(startsWith(c,'SO'))<length(c)
-        %fprintf('--->%d\n',AAv(k));
-    %    s_so=strcat(s_so, " ", c(end));
-    %end
-
     s_au=c(startsWith(c,'FAU '));
-    %s_ti=c(startsWith(c,'TI'));
-
-    %if strcmp(extractBefore(c(find(startsWith(c,'TI'))+1),2)," ")
-    %    s_ti=strcat(s_ti,strtrim(c(find(startsWith(c,'TI'))+1)));
-    %end
-
-    
-    %s_ti=strtrim(extractAfter(s_ti,6));
-    %s_pmid=strtrim(extractAfter(s_pmid,6));
-    %s_so=strtrim(extractAfter(s_so,6));
+    s_au=c(startsWith(c,'AU '));
     s_au=strtrim(extractAfter(s_au,6));
-
     S_AU=[S_AU; s_au];
-
-    %s_j=extractBefore(s_so,'.');
-    %s_t = strtrim(extractBefore(extractAfter(s_so,'.'),'.'));
-    
-
-    
-%     s_d = extractAfter(s_so,'doi: ');
-%     s_d=extractBefore(s_d,strlength(s_d));
-    
-    %s_doi=c(contains(c,"[doi]"));
-    %if ~isempty(s_doi)
-    %    s_doi=strtrim(extractAfter(s_doi,6));
-    %    s_doi=strrep(s_doi," [doi]","");
-    %end
-
-
-    % fprintf(fid,"\n<li>");
-    % 
-    % if length(s_au)==1
-    %     fprintf(fid,"%s.\n",s_au);
-    % else
-    %     fprintf(fid,"%s, ",s_au(1:end-1));
-    %     fprintf(fid,"%s.\n",s_au(end));
-    % end
-    %fprintf(fid,"<strong>%s</strong>\n",s_ti);
-    %fprintf(fid,"<em><u>%s</u></em>.\n",s_j);
-    %fprintf(fid,"%s.\n",s_t);
-
-    %if ~isempty(s_doi)
-    %    fprintf(fid,"doi: <a href=""https://doi.org/%s"">%s</a>.\n",s_doi(1),s_doi(1));
-    %end
-
-    %fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
 end
 
 S_AU=unique(S_AU);
-
-
 
 fprintf(fid,"</ol>\n");
 fprintf(fid,"<pre>\n");
