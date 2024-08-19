@@ -22,7 +22,8 @@ if nargin<2, ishighlighted=false; end
         s="<li>";
     end    
     
-    s_au=aaa(a,'citation_author');
+    s_au = e_metacontentext(a,'citation_author');
+    [s_au] = e_authornamemod(s_au);
     %s_au
     if length(s_au)==1
         s=sprintf("%s%s.\n",s,s_au);
@@ -32,31 +33,37 @@ if nargin<2, ishighlighted=false; end
         s=sprintf("%s%s.\n",s,sx);        
     end
 
-    s_ti=aaa(a,'citation_title');
-    s_j=aaa(a,'citation_journal_abbrev');
+    s_ti=e_metacontentext(a,'citation_title');
+    s_j=e_metacontentext(a,'citation_journal_abbrev');
 
     s_j=strrep(s_j,'.','');
 
 
-    s_t=aaa(a,'citation_publication_date');
+    s_t=e_metacontentext(a,'citation_publication_date');
     if isempty(s_t)
-        s_t=aaa(a,'citation_online_date');        
+        s_t=e_metacontentext(a,'citation_online_date');        
     end
 
-    s_v=aaa(a,'citation_volume');
-    s_i=aaa(a,'citation_issue');
+    s_v=e_metacontentext(a,'citation_volume');
+    s_i=e_metacontentext(a,'citation_issue');
+    if isempty(s_i)
+        s_i=e_metacontentext(a,'citation_arxiv_id');
+    end
 
-    s_p1=aaa(a,'citation_firstpage');
-    s_p2=aaa(a,'citation_lastpage');
+    s_p1=e_metacontentext(a,'citation_firstpage');
+    s_p2=e_metacontentext(a,'citation_lastpage');
     
 
     s=sprintf("%s<strong>%s.</strong>\n",s,s_ti);
     s=sprintf("%s<em><u>%s</u></em>.\n",s,s_j);
-    if ~isempty(s_p1)
-        
+    if ~isempty(s_p1)        
         s=sprintf("%s%s;%s(%s)%s-%s.\n",s,s_t,s_v,s_i,s_p1,s_p2);
     else
-        s=sprintf("%s%s;%s(%s).\n",s,s_t,s_v,s_i);
+        if ~isempty(s_i)
+            s=sprintf("%s%s;%s(%s).\n",s,s_t,s_v,s_i);
+        else
+            s=sprintf("%s%s;%s.\n",s,s_t,s_v);
+        end
     end
     
     s=sprintf("%sdoi:<a href=""https://doi.org/%s"">%s</a>.</li>\n",s,s_doi,s_doi);
@@ -67,20 +74,20 @@ if nargin<2, ishighlighted=false; end
 end
 
 
-function s=aaa(a,tag)
-    s='';
-    tag=sprintf('<meta name="%s" content="',tag);
-    idx=find(contains(a,tag));
-    if isempty(idx), return; end
-    %length(idx)
-    s=strings(length(idx),1);
-    for k=1:length(idx)
-        b=a{idx(k)};
-        b=b(strfind(b, tag)+strlength(tag):end);
-        b=b(1:strfind(b,'"')-1);
-        s(k)=b;  
-    end
-end
+% function s=e_metacontentext(a,tag)
+%     s='';
+%     tag=sprintf('<meta name="%s" content="',tag);
+%     idx=find(contains(a,tag));
+%     if isempty(idx), return; end
+%     %length(idx)
+%     s=strings(length(idx),1);
+%     for k=1:length(idx)
+%         b=a{idx(k)};
+%         b=b(strfind(b, tag)+strlength(tag):end);
+%         b=b(1:strfind(b,'"')-1);
+%         s(k)=b;  
+%     end
+% end
 
 
 %if ~any(contains(a,ta)
