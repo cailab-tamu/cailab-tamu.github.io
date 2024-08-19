@@ -5,8 +5,7 @@ if nargin<2, ishighlighted=false; end
      a=webread(sprintf('https://doi.org/%s',s_doi));
      a=strtrim(strsplit(a,{'\n','/>'}))';
      a(strlength(a)==0)=[];
-
-     
+     a=a(contains(a, "<meta "));
         % a{contains(a,'<meta name="citation_author" content="')}
         % a{contains(a,'<meta name="citation_journal_title" content="')}
         % a{contains(a,'<meta name="citation_journal_abbrev" content="')}
@@ -34,9 +33,18 @@ if nargin<2, ishighlighted=false; end
     end
 
     s_ti=e_metacontentext(a,'citation_title');
-    s_j=e_metacontentext(a,'citation_journal_abbrev');
 
+    s_j=e_metacontentext(a,'citation_journal_abbrev');
     s_j=strrep(s_j,'.','');
+    if isempty(s_j)
+       s_j=e_metacontentext(a,'citation_journal_title');
+       if isempty(s_j)
+           s_j=e_metacontentext(a,'citation_arxiv_id');
+           if ~isempty(s_j)
+               s_j = "arXiv";
+           end
+       end
+    end
 
 
     s_t=e_metacontentext(a,'citation_publication_date');
@@ -52,12 +60,17 @@ if nargin<2, ishighlighted=false; end
     if isempty(s_i)
         s_i=e_metacontentext(a,'citation_arxiv_id');
     end
-
     s_p1=e_metacontentext(a,'citation_firstpage');
     s_p2=e_metacontentext(a,'citation_lastpage');
     
 
     s=sprintf("%s<strong>%s.</strong>\n",s,s_ti);
+
+    %s_j
+    if ismember(s_j, ["arXiv","bioRxiv"])
+        s_j = s_j+" "+"[Preprint]";
+    end
+
     s=sprintf("%s<em><u>%s</u></em>.\n",s,s_j);
     if ~isempty(s_p1)
         if ~isempty(s_i)
