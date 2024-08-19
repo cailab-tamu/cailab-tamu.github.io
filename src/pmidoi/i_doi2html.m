@@ -41,7 +41,10 @@ if nargin<2, ishighlighted=false; end
 
     s_t=e_metacontentext(a,'citation_publication_date');
     if isempty(s_t)
-        s_t=e_metacontentext(a,'citation_online_date');        
+        s_t=e_metacontentext(a,'citation_online_date');
+        if isempty(s_t)
+            s_t=e_metacontentext(a,'citation_date');
+        end
     end
 
     s_v=e_metacontentext(a,'citation_volume');
@@ -56,8 +59,12 @@ if nargin<2, ishighlighted=false; end
 
     s=sprintf("%s<strong>%s.</strong>\n",s,s_ti);
     s=sprintf("%s<em><u>%s</u></em>.\n",s,s_j);
-    if ~isempty(s_p1)        
-        s=sprintf("%s%s;%s(%s)%s-%s.\n",s,s_t,s_v,s_i,s_p1,s_p2);
+    if ~isempty(s_p1)
+        if ~isempty(s_i)
+            s=sprintf("%s%s;%s(%s)%s-%s.\n",s,s_t,s_v,s_i,s_p1,s_p2);
+        else
+            s=sprintf("%s%s;%s %s-%s.\n",s,s_t,s_v,s_p1,s_p2);
+        end
     else
         if ~isempty(s_i)
             s=sprintf("%s%s;%s(%s).\n",s,s_t,s_v,s_i);

@@ -7,7 +7,7 @@ for k=1:length(AAv)
     AAv(k)
     pause(1)
     ishighlighted=ismember(AAv(k),Highlighted);
-
+    
     if contains(AAv(k),'/')
         s=i_doi2html(AAv(k),ishighlighted);
     else
@@ -25,10 +25,20 @@ for k=1:length(Highlighted)
     Highlighted(k)
     pause(1)
     ishighlighted = ~ismember(Highlighted(k),Highlighted);
-    if contains(Highlighted(k),'/')
-        s=i_doi2html(Highlighted(k), ishighlighted);
-    else
-        s=i_pmid2html(Highlighted(k), ishighlighted);
+    try
+        if contains(Highlighted(k),'/')
+            s=i_doi2html(Highlighted(k), ishighlighted);
+        else
+            s=i_pmid2html(Highlighted(k), ishighlighted);
+        end
+    catch ME
+        disp(ME.message);
+        pause(5)
+        if contains(Highlighted(k),'/')
+            s=i_doi2html(Highlighted(k), ishighlighted);
+        else
+            s=i_pmid2html(Highlighted(k), ishighlighted);
+        end
     end
    fprintf(fid,"%s",s);
 end
