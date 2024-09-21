@@ -1,6 +1,29 @@
+fid=fopen('news_source.txt','r');
+a=textscan(fid,'%s','Delimiter','\n');
+a=a{1};
+fclose(fid);
+a=a(cellfun(@length, a)>0);
+
+fid=fopen('news_aa.html','w');
+fprintf(fid, '<p>\n\t<dl>\n\n');
+t=-1;
+for k=1:length(a)
+    t=-1*t;
+    if t>0
+        fprintf(fid, '\t<dt>%s</dt>\n', string(datetime(a{k},'Format','MM/dd/uuuu', ...
+            'InputFormat','MM/dd/uuuu')));
+    else
+        fprintf(fid, '\t<dd>%s</dd>\n\n', a{k});
+    end
+end
+fprintf(fid, '\t</dl>\n</p>');
+fclose(fid);
+
+
+
 
 C0=i_readtxt('index_template.html');
-C1=i_readtxt('news.html');
+C1=i_readtxt('news_aa.html');
 C2=i_readtxt('publication.html');
 C3=i_readtxt('people.html');
 
