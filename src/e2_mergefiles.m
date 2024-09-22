@@ -24,7 +24,7 @@ fclose(fid);
 
 C0=i_readtxt('index_template.html');
 C1=i_readtxt('news_aa.html');
-C2=i_readtxt('publication.html');
+C2=i_readtxt('publications.html');
 C3=i_readtxt('people.html');
 
 i1=find(strcmp('<<<1>>>',C0));
