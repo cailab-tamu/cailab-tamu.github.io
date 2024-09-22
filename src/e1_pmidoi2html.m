@@ -24,7 +24,7 @@ for k=1:length(AAv)
 end
 fprintf(fid,"</ol>\n");
 fclose(fid);
-
+copyfile("publications.html","../publications.html");
 
 fid=fopen('selectpublications.html','w');
 fprintf(fid,"<h3>Select Publications</h3>\n<ol>");
