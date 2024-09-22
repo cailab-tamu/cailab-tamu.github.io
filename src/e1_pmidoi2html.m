@@ -3,7 +3,7 @@ e0_pmidoilist;
 
 wavefilev = matlab.lang.makeValidName(AAv);
 
-fid=fopen('publication.html','w');
+fid=fopen('publications.html','w');
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
 
 for k=1:length(AAv)
