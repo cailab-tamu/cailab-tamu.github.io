@@ -27,6 +27,10 @@ if nargin<2, ishighlighted=false; end
         s_ti=strcat(s_ti,strtrim(c(find(startsWith(c,'TI'))+1)));
     end
 
+    if strcmp(extractBefore(c(find(startsWith(c,'TI'))+2),2)," ")
+        s_ti=strcat(s_ti," ",strtrim(c(find(startsWith(c,'TI'))+2)));
+    end
+    s_ti = strrep(s_ti, "  "," ");
     
     s_ti=strtrim(extractAfter(s_ti,6));
     s_pmid=strtrim(extractAfter(s_pmid,6));
