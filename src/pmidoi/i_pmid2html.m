@@ -32,7 +32,7 @@ if nargin<2, ishighlighted=false; end
     end
     s_ti = strrep(s_ti, "  "," ");
     
-    s_ti=strtrim(extractAfter(s_ti,6));
+    s_ti=strtrim(extractAfter(s_ti,5));
     s_pmid=strtrim(extractAfter(s_pmid,6));
     s_so=strtrim(extractAfter(s_so,6));
     s_au=strtrim(extractAfter(s_au,6));
