@@ -7,20 +7,25 @@ fid=fopen('publications.html','w');
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
 
 for k=1:length(AAv)
-    AAv(k)
+    % AAv(k)
     pause(1)
-    ishighlighted=ismember(AAv(k),Highlighted);
-    
-    if contains(AAv(k),'/')
-        s=i_doi2html(AAv(k),ishighlighted);
-    else
-        s=i_pmid2html(AAv(k),ishighlighted);
+    ishighlighted = ismember(AAv(k), Highlighted);
+
+    try
+        if contains(AAv(k),'/')
+            s=i_doi2html(AAv(k),ishighlighted);
+        else
+            s=i_pmid2html(AAv(k),ishighlighted);
+        end
+       fprintf(fid,"\n%s",s);
+       if exist(sprintf('../wav/%s.wav', wavefilev(k)),'file')
+           fprintf(fid,"<audio controls src=""wav/%s.wav"" style=""height: 30px;""></audio>\n", wavefilev(k));
+           % fprintf(fid,"<audio controls style=""width: 200px; height: 30px;""><source src=""wav/%s.wav"" type=""audio/wave""></audio>\n", wavefilev(k));
+       end
+    catch ME
+        warning(ME.identifier, '%s', ME.message);
     end
-   fprintf(fid,"\n%s",s);
-   if exist(sprintf('../wav/%s.wav', wavefilev(k)),'file')
-       fprintf(fid,"<audio controls src=""wav/%s.wav"" style=""height: 30px;""></audio>\n", wavefilev(k));
-       % fprintf(fid,"<audio controls style=""width: 200px; height: 30px;""><source src=""wav/%s.wav"" type=""audio/wave""></audio>\n", wavefilev(k));
-   end
+  
 end
 fprintf(fid,"</ol>\n");
 fclose(fid);

@@ -1,11 +1,12 @@
 function [s]=i_pmid2html(pmid,ishighlighted)
 
 if nargin<2, ishighlighted=false; end
-    
+    options = weboptions('Timeout', 50);
+
     if ischar(pmid) || isstring(pmid)
-        a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%s/?format=pubmed',pmid));
+        a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%s/?format=pubmed',pmid), options);
     elseif isnumeric(pmid)
-        a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%d/?format=pubmed',pmid));
+        a=webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%d/?format=pubmed',pmid), options);
     else
         error('PMID data type is unsupported.');
     end

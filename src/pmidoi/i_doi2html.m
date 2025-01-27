@@ -2,7 +2,9 @@ function [s]=i_doi2html(s_doi,ishighlighted)
 
 if nargin<2, ishighlighted=false; end
 
-     a=webread(sprintf('https://doi.org/%s',s_doi));
+options = weboptions('Timeout', 50);
+
+     a=webread(sprintf('https://doi.org/%s',s_doi), options);
      a=strtrim(strsplit(a,{'\n','/>'}))';
      a(strlength(a)==0)=[];
      a=a(contains(a, "<meta "));
