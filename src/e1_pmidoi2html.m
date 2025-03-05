@@ -34,7 +34,7 @@ copyfile("publications.html","../publications.html");
 fid=fopen('selectpublications.html','w');
 fprintf(fid,"<h3>Select Publications</h3>\n<ol>");
 for k=1:length(Highlighted)
-    Highlighted(k)
+    Highlighted(k);
     pause(1)
     ishighlighted = ~ismember(Highlighted(k),Highlighted);
     try
