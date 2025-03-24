@@ -10,6 +10,15 @@ fprintf(fid,"</ol>\n");
 
 fprintf(fid,"<h3>Journal Articles</h3>\n<ol>");
 in_loopthrough(AAv(~ispreprint), fid, Highlighted);
+
+    fidx=fopen('publications_old.html','r');
+    a=textscan(fidx,'%s','Delimiter','\n');
+    a=a{1};
+    fclose(fidx);
+    for k=1:length(a)
+        fprintf(fid, '%s\n', a{k});
+    end
+
 fprintf(fid,"</ol>\n");
 fclose(fid);
 copyfile("publications.html","../publications.html");
