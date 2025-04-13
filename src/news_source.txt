@@ -1,3 +1,6 @@
+04/17/2025
+Dr. Cai speaks at the <a href="https://sciml.tamids.tamu.edu/2025/04/04/tamids-spring-2025-sciml-workshop/">Spring 2025 TAMIDS SciML workshop</a>.
+
 01/19/2025
 Shreyan tackled the *survivorship bias* problem in gene function research - <a href=https://nature.com/articles/s42003-025-07530-0>Gene function revealed at the moment of sitochastic gene silencing</a> (the typo in the title will be fixed soon:)
 
