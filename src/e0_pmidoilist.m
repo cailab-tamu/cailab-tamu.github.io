@@ -1,4 +1,4 @@
-AAv = readlines('ids_new.txt',"EmptyLineRule","skip");
+AAv = readlines('ids.txt',"EmptyLineRule","skip");
 
 assert(length(unique(AAv))==length(AAv))
 ispreprint = contains(AAv,'*');
