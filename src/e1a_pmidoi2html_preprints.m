@@ -73,6 +73,6 @@ function in_loopthrough(AAv, fid, Highlighted)
            end
         catch ME
             warning(ME.identifier, '%s', ME.message);
-        end  
+        end
     end
 end
