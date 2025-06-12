@@ -5,7 +5,10 @@ fid=fopen('authorlist.html','w');
 fprintf(fid,"<h3>Author List</h3>\n<ol>");
 S_AU=[];
 
-for k=1:length(AAv)
+d = dictionary;
+d2 = dictionary;
+
+for k=1:36 %length(AAv)
     pause(1)
     AAv(k)
     try
@@ -19,9 +22,13 @@ for k=1:length(AAv)
         a = webread(sprintf('https://pubmed.ncbi.nlm.nih.gov/%s/?format=pubmed',AAv(k)));
         b = extractHTMLText(a);
         c = string(strsplit(b,'\n')');
+
+        d = aaa_parse_au2(c, d);
+        d2 = add_date(c, d2);
+
         s_au=c(startsWith(c,'FAU '));
         % s_au = c(startsWith(c,'AU '));
-        s_au = strtrim(extractAfter(s_au,6));
+        s_au = strtrim(extractAfter(s_au, 6));
         S_AU=[S_AU; s_au];
     end
     catch ME
@@ -36,7 +43,11 @@ S_AU=unique(S_AU);
 fprintf(fid,"</ol>\n");
 fprintf(fid,"<pre>\n");
 for k=1:length(S_AU)
-    fprintf(fid,"%s\n",S_AU(k));
+    try
+        fprintf(fid,"%s\t%s\t%s\n", S_AU(k), d(S_AU(k)), d2(S_AU(k)) );
+    catch
+        fprintf(fid,"%s\t%s\t%s\n", S_AU(k), '', '');
+    end
 end
 fprintf(fid,"</pre>\n");
 fclose(fid);
