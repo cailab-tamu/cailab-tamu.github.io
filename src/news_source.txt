@@ -5,13 +5,13 @@ Dr. Cai speaks at the UAAT (NTU)-CVMBSTAMU Bilateral Symposium at CVM. Title "Be
 Dr. Cai gives (NIH R25 Genome Research Experiences) PVAMU summer lab talk in the Department of Biology hosted by Dr. Asha Rao.
 
 06/11/2025
-Dr. Cai joins the <a href=https://journals.plos.org/plosgenetics/static/editorial-board?>Editorial Board</a> of PLOS Genetics as an Academic Editor.
+Dr. Cai joins the <a href="https://journals.plos.org/plosgenetics/static/editorial-board?">Editorial Board</a> of PLOS Genetics as an Academic Editor.
 
 05/13/2025
-Dr. Cai presents at <a href="https://calendar.tamu.edu/physics/event/353988-amoiqse-seminar-harnessing-quantum-computing-for-sing">AMO/IQSE seminar on quantum computing for single-cell biomedicine</a>, hosted by the Institute for Quantum Science and Engineering (<a href=https://iqse.tamu.edu/>IQSE</a>).
+Dr. Cai presents at <a href="https://calendar.tamu.edu/physics/event/353988-amoiqse-seminar-harnessing-quantum-computing-for-sing">AMO/IQSE seminar on quantum computing for single-cell biomedicine</a>, hosted by the Institute for Quantum Science and Engineering (<a href="https://iqse.tamu.edu/">IQSE</a>).
 
 04/22/2025
-Opening: <a href=opening.html>PhD Position in Computational Biology and Quantum Computing</a>.
+Opening: <a href="opening.html">PhD Position in Computational Biology and Quantum Computing</a>.
 
 04/17/2025
 Dr. Cai speaks at the <a href="https://sciml.tamids.tamu.edu/2025/04/04/tamids-spring-2025-sciml-workshop/">Spring 2025 TAMIDS SciML workshop</a>.
@@ -20,10 +20,10 @@ Dr. Cai speaks at the <a href="https://sciml.tamids.tamu.edu/2025/04/04/tamids-s
 Technical achievements with MATLAB: <a href="https://www.mathworks.com/company/user_stories/using-quantum-computing-for-gene-expression-analysis.html">Project Advances Quantum Computing Applications in Life Sciences</a>.
 
 01/19/2025
-Shreyan tackled the *survivorship bias* problem in gene function research - <a href=https://nature.com/articles/s42003-025-07530-0>Gene function revealed at the moment of sitochastic gene silencing</a> (the typo in the title will be fixed soon:)
+Shreyan tackled the *survivorship bias* problem in gene function research - <a href="https://nature.com/articles/s42003-025-07530-0">Gene function revealed at the moment of sitochastic gene silencing</a> (the typo in the title will be fixed soon:)
 
 01/16/2025
-<a href=https://vetmed.tamu.edu/news/annual-reports/?utm_source=newsletter&utm_medium=email&utm_content=View%20Full%20FY24%20Annual%20Report&utm_campaign=FY24%20Annual%20Report%20%7C%20Jan%202025>CVM FY24 Annual Report</a> and Faculty Spotlight: <a href=https://indd.adobe.com/embed/845bb619-5cbc-43f8-8a3f-eadf07451601?startpage=12&allowFullscreen=true>Dr. Cai</a>.
+<a href="https://vetmed.tamu.edu/news/annual-reports/?utm_source=newsletter&utm_medium=email&utm_content=View%20Full%20FY24%20Annual%20Report&utm_campaign=FY24%20Annual%20Report%20%7C%20Jan%202025">CVM FY24 Annual Report</a> and Faculty Spotlight: <a href="https://indd.adobe.com/embed/845bb619-5cbc-43f8-8a3f-eadf07451601?startpage=12&allowFullscreen=true">Dr. Cai</a>.
 
 11/13/2024
 Dr. Cai speaks at the NTU-TAMU Bilateral Symposium in Taipei.
@@ -32,7 +32,7 @@ Dr. Cai speaks at the NTU-TAMU Bilateral Symposium in Taipei.
 Dr. Cai speaks at National Chung Hsing University in Taichung.
 
 11/11/2024
-Dr. Cai speaks at the <a href=https://canr.nchu.edu.tw/web/result/detail.php?lang=zh_tw&cid=4&id=1180>11th GEAR-UP Forum - Norman Borlaug Lecture Series</a> in Taichung.
+Dr. Cai speaks at the <a href="https://canr.nchu.edu.tw/web/result/detail.php?lang=zh_tw&cid=4&id=1180">11th GEAR-UP Forum - Norman Borlaug Lecture Series</a> in Taichung.
 
 11/01/2024
 VMBS TODAY // Fall 2024 - <a href="https://indd.adobe.com/embed/02409bb3-bf7d-4e24-97e5-1498d3c02156?startpage=23&allowFullscreen=true">Quantum Leaps in Single-Cell Science</a> (Story by Courtney Price).
@@ -65,7 +65,7 @@ Dr. Cai speaks at the <a href="https://icsa.zuel.edu.cn/index.html">ICSA 2024 Ch
 Dr. Cai speaks at the <a href="https://www.csh-asia.org/?content/2349">DNA Metabolism, Genomic Stability and Human Disease Conference</a> in Suzhou, China.
 
 05/28/2024
-Dr. Cai speaks in the <a href="https://hkumicro.hku.hk/">Department of Microbiology</a> and in the <a href=https://www.sbms.hku.hk/event/seminar-2024-05-28>School of Biomedical Sciences</a>, University of Hong Kong.
+Dr. Cai speaks in the <a href="https://hkumicro.hku.hk/">Department of Microbiology</a> and in the <a href="https://www.sbms.hku.hk/event/seminar-2024-05-28">School of Biomedical Sciences</a>, University of Hong Kong.
 
 05/23/2024
 Dr. Cai speaks at the <a href="https://www.iddst.com/iddst2024/default.asp">IDDST</a>, Osaka, Japan.
@@ -113,7 +113,7 @@ Our latest research on "Quantum gene regulatory networks" has just been publishe
 Yongjian starts doing internship at <a href="https://www.modernatx.com/">Moderna</a>.
 
 06/24/2023
-Yongjian speaks at the Artificial Intelligence and Biomedicine Society (<a href="https://ai2healthcare.github.io/news/2023/06/18/Dr.Yongjian_Yang">AI2Health)</a>. Check out the <a href=https://youtu.be/AKwP9rzrbVU>recording</a>.
+Yongjian speaks at the Artificial Intelligence and Biomedicine Society (<a href="https://ai2healthcare.github.io/news/2023/06/18/Dr.Yongjian_Yang">AI2Health)</a>. Check out the <a href="https://youtu.be/AKwP9rzrbVU">recording</a>.
 
 05/22/2023
 Dr. Cai speaks at Texas A&amp;M Cancer Research Symposium at The George in Century Square.
