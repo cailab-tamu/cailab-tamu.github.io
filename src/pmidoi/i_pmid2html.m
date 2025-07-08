@@ -77,11 +77,12 @@ if nargin<2, ishighlighted=false; end
     %fprintf(fid,"PMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s_pmid,s_pmid);
 
     
-    s=sprintf("%sPMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.</li>\n",s,s_pmid,s_pmid);
+    s=sprintf("%sPMID: <a href=""https://pubmed.ncbi.nlm.nih.gov/%s"">%s</a>.",s,s_pmid,s_pmid);
     
     if ~isempty(s_doi)        
-        s=sprintf("%s<span class=""__dimensions_badge_embed__"" data-doi=""%s"" data-style=""small_rectangle""></span><br>\n",s,s_doi(1));
+        s=sprintf("%s<span class=""__dimensions_badge_embed__"" data-doi=""%s"" data-style=""small_rectangle""></span>",s,s_doi(1));
     else
-        s=sprintf("%s<br>\n",s);
+        s=sprintf("%s",s);
     end
+    s=sprintf("%s</li>\n",s);
 end
