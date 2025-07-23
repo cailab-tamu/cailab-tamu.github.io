@@ -1,7 +1,8 @@
-function [d] = aaa_parse_au2(c, d)
+function [d, yes] = aaa_parse_au2(c, d)
 
-lines = c;   
-% Initialize output arrays
+    yes = false;
+    lines = c;   
+    % Initialize output arrays
     authors = {};
     affiliations = {};
     current_author_affiliations = {};
@@ -73,6 +74,9 @@ lines = c;
 
         if i <= length(affiliations) && ~isempty(affiliations{i})
             d(authors{i}) = affiliations{i}{1};
+            if contains(affiliations{i}{1}, 'China')
+                yes = true;
+            end
         end
 
         %{

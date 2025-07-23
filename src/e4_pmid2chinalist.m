@@ -1,8 +1,9 @@
 addpath('pmidoi\');
 e0_pmidoilist;
 
-fid=fopen('authorlist.html','w');
-fprintf(fid,"<h3>Author List</h3>\n<ol>");
+fname = 'paperlist_with_china.html';
+writelines("<ol>", fname);
+
 S_AU=[];
 
 d = dictionary;
@@ -23,35 +24,31 @@ for k=1:49 %length(AAv)   %Year 2020-Present
         b = extractHTMLText(a);
         c = string(strsplit(b,'\n')');
 
-        d = aaa_parse_au2(c, d);
+        [d, yes] = aaa_parse_au2(c, d);
         d2 = add_date(c, d2);
 
         s_au=c(startsWith(c,'FAU '));
         % s_au = c(startsWith(c,'AU '));
         s_au = strtrim(extractAfter(s_au, 6));
-        S_AU=[S_AU; s_au];
+        S_AU = [S_AU; s_au];
+
+        if yes
+            if contains(AAv(k),'/')
+                s1=i_doi2html(AAv(k), false);
+            else
+                s1=i_pmid2html(AAv(k), false);
+            end 
+            writelines(s1, fname, WriteMode="append");
+        end
     end
+
     catch ME
         disp(ME.message);
     end
 end
 
-S_AU=unique(S_AU);
+writelines("</ol>", fname, WriteMode="append");
 
-
-
-fprintf(fid,"</ol>\n");
-fprintf(fid,"<pre>\n");
-for k=1:length(S_AU)
-    try
-        fprintf(fid,"%s\t%s\t%s\n", S_AU(k), d(S_AU(k)), d2(S_AU(k)) );
-    catch
-        fprintf(fid,"%s\t%s\t%s\n", S_AU(k), '', '');
-    end
-end
-fprintf(fid,"</pre>\n");
-fclose(fid);
-    
 
 function s=aaa(a,tag)
     s='';
