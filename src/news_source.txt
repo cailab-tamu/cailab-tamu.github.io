@@ -7,6 +7,9 @@ The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">Te
 07/22/2025
 Dr. Cai speaks at the UAAT (NTU)-CVMBSTAMU Bilateral Symposium at CVM. Title "Beyond differential expression: emerging methods in single-cell bioinformatics for neuroscience and infectious disease research."
 
+07/02/2025
+Dr. Cai joins as an affiliated member the <href="https://iqse.tamu.edu/">Institute for Quantum Science and Engineering (IQSE)</a>.
+
 06/19/2025
 Dr. Cai gives (NIH R25 Genome Research Experiences) PVAMU summer lab talk in the Department of Biology hosted by Dr. Asha Rao.
 
