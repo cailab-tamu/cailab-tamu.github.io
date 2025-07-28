@@ -4,11 +4,14 @@ The Cai lab attends the <a href="https://scso25.blogs.rice.edu/">6th Annual GCC 
 09/19/2025
 The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">Texas Quantum Summit</a>.
 
+09/03/2025
+Dr. Cai lab attends Texas A&M Quantum Initiative Event.
+
 07/22/2025
 Dr. Cai speaks at the UAAT (NTU)-CVMBSTAMU Bilateral Symposium at CVM. Title "Beyond differential expression: emerging methods in single-cell bioinformatics for neuroscience and infectious disease research."
 
 07/02/2025
-Dr. Cai joins as an affiliated member the <href="https://iqse.tamu.edu/">Institute for Quantum Science and Engineering (IQSE)</a>.
+Dr. Cai joins as an affiliated member of the <a href="https://iqse.tamu.edu/">Institute for Quantum Science and Engineering</a> (IQSE).
 
 06/19/2025
 Dr. Cai gives (NIH R25 Genome Research Experiences) PVAMU summer lab talk in the Department of Biology hosted by Dr. Asha Rao.
@@ -17,7 +20,7 @@ Dr. Cai gives (NIH R25 Genome Research Experiences) PVAMU summer lab talk in the
 Dr. Cai joins the <a href="https://journals.plos.org/plosgenetics/static/editorial-board?">Editorial Board</a> of PLOS Genetics as an Academic Editor.
 
 05/13/2025
-Dr. Cai presents at <a href="https://calendar.tamu.edu/physics/event/353988-amoiqse-seminar-harnessing-quantum-computing-for-sing">AMO/IQSE seminar on quantum computing for single-cell biomedicine</a>, hosted by the Institute for Quantum Science and Engineering (<a href="https://iqse.tamu.edu/">IQSE</a>).
+Dr. Cai presents at <a href="https://calendar.tamu.edu/physics/event/353988-amoiqse-seminar-harnessing-quantum-computing-for-sing">AMO/IQSE seminar on quantum computing for single-cell biomedicine</a>, hosted by the Institute for Quantum Science and Engineering (IQSE).
 
 04/22/2025
 Opening: <a href="opening.html">PhD Position in Computational Biology and Quantum Computing</a>.
