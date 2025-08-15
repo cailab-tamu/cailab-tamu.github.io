@@ -7,6 +7,9 @@ The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">Te
 09/03/2025
 Dr. Cai lab attends Texas A&M Quantum Initiative Event.
 
+08/15/2025
+Shreyan starts a data science internship at <a href="https://www.boehringer-ingelheim.com/us">Boehringer Ingelheim</a>.
+
 07/22/2025
 Dr. Cai speaks at the UAAT (NTU)-CVMBSTAMU Bilateral Symposium at CVM. Title "Beyond differential expression: emerging methods in single-cell bioinformatics for neuroscience and infectious disease research."
 
