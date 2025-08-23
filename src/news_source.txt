@@ -7,6 +7,12 @@ The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">Te
 09/03/2025
 Dr. Cai lab attends Texas A&M Quantum Initiative Event.
 
+09/01/2025
+Yuqiao Tang and Vignesh Kummar join the Cai lab.
+
+08/23/2025
+News report on Vertex Article - <a href="https://www.vertexpro.co.uk/VertexArticles/Quantum-Leap-for-Veterinary-Science:-Single-Cell-Gene-Networks-Go-Quantum618e1c76-c54e-4f7a-a9dd-6f3f74677134">Quantum Leap for Veterinary Science: Single-Cell Gene Networks Go Quantum</a>.
+
 08/15/2025
 Shreyan starts a data science internship at <a href="https://www.boehringer-ingelheim.com/us">Boehringer Ingelheim</a>.
 
@@ -33,6 +39,9 @@ Dr. Cai speaks at the <a href="https://sciml.tamids.tamu.edu/2025/04/04/tamids-s
 
 04/14/2025
 Technical achievements with MATLAB: <a href="https://www.mathworks.com/company/user_stories/using-quantum-computing-for-gene-expression-analysis.html">Project Advances Quantum Computing Applications in Life Sciences</a>.
+
+02/14/2025
+Story by Courtney Price, VMBS Marketing & Communications - <a href="https://vetmed.tamu.edu/news/press-releases/a-new-direction-in-biology-quantum-computing/">Texas A&M Researcher Charts A New Direction In Biology, Quantum Computing</a>.
 
 01/19/2025
 Shreyan tackled the *survivorship bias* problem in gene function research - <a href="https://nature.com/articles/s42003-025-07530-0">Gene function revealed at the moment of sitochastic gene silencing</a> (the typo in the title will be fixed soon:)
