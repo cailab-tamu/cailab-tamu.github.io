@@ -28,13 +28,6 @@ fprintf(fid,"</ol>\n");
 fclose(fid);
 
 
-fid=fopen('../selected_publications.html','w');
-y=ismember(AAv,Highlighted);
-S1 = in_loopthrough_simple(AAv(y), Highlighted);
-fprintf(fid,"<h3>Selected Publications</h3>\n<ol>");
-fprintf(fid,"\n%s\n", S1);
-fprintf(fid,"</ol>\n");
-fclose(fid);
 
 
     function [s] = in_loopthrough_simple(AAv, Highlighted)
