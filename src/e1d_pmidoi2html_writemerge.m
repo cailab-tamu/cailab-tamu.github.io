@@ -68,9 +68,10 @@ fclose(fid);
         wavefilev = matlab.lang.makeValidName(AAv);
         for k=1:length(AAv)
             fname = fullfile("paperhtml", matlab.lang.makeValidName(AAv(k)));
-            if ~exist(fname,"file") || exist(sprintf('../wav/%s.wav', wavefilev(k)),'file')
+            ishighlighted = ismember(AAv(k), Highlighted);
+            if ishighlighted || ~exist(fname,"file") || exist(sprintf('../wav/%s.wav', wavefilev(k)),'file')
                 pause(1)
-                ishighlighted = ismember(AAv(k), Highlighted);        
+                ishighlighted = ismember(AAv(k), Highlighted);
                 try
                     if contains(AAv(k),'/')
                         s1=i_doi2html(AAv(k),ishighlighted);
