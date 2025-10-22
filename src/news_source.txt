@@ -1,8 +1,8 @@
-10/22/2025
-The Cai lab attends the <a href="https://scso25.blogs.rice.edu/">6th Annual GCC Single & Spatial Cell Omics Symposium</a>.
+10/21/2025
+scGEAToolApp appears in Windows Store <a href="https://apps.microsoft.com/detail/9n0mrfh4rz0r?hl=en-us&gl=US&ocid=pdpshare">View in Store</a>.
 
 09/19/2025
-The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">Texas Quantum Summit</a>.
+The Cai lab attends <a href="https://research.tamu.edu/texas-quantum-summit/">2025 Texas Quantum Summit</a>.
 
 09/10/2025
 Dr. Cai gives a talk to Quant A&M students in Peterson 119; 7-8pm Wednesday, September 10th. Title: Quantum Computing for Machine Learning: Promises, Challenges, and a Realistic Outlook. Details:  Join us to discover how quantum computing could transform machine learning, what hurdles remain, and where the field is headed. A clear, no-hype introduction to one of today's most exciting frontiers hosted by Texas A&M's only Quantum Computing organization.
