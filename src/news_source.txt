@@ -1,3 +1,6 @@
+10/22/2025
+Dr. Cai gives a talk titled "Advancing Cancer Research Through Single-Cell Data Science: Two Years of Progress and the Road Ahead" at the TREC Single Cell Data Science Facility Core Update Seminar, along with Dr. Yang Ni.
+
 10/21/2025
 scGEAToolApp appears in Windows Store <a href="https://apps.microsoft.com/detail/9n0mrfh4rz0r?hl=en-us&gl=US&ocid=pdpshare">View in Store</a>.
 
