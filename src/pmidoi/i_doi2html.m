@@ -3,6 +3,9 @@ function [s]=i_doi2html(s_doi,ishighlighted)
 if nargin<2, ishighlighted=false; end
 
 options = weboptions('Timeout', 50);
+options = weboptions( ...
+    'UserAgent','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36', ...
+    'Timeout',30);
 
      a=webread(sprintf('https://doi.org/%s',s_doi), options);
      a=strtrim(strsplit(a,{'\n','/>'}))';
