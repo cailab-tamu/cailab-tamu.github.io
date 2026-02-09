@@ -77,7 +77,7 @@ Dr. Cai speaks at the <a href="https://canr.nchu.edu.tw/web/result/detail.php?la
 VMBS TODAY // Fall 2024 - <a href="https://indd.adobe.com/embed/02409bb3-bf7d-4e24-97e5-1498d3c02156?startpage=23&allowFullscreen=true">Quantum Leaps in Single-Cell Science</a> (Story by Courtney Price).
 
 10/12/2024
-Selim speaks at the <a href="https://icibm2024.iaibm.org/">International Conference on Intelligent Biology and Medicine (ICIBM 2024)</a> in Houston.
+Selim speaks at the <a href="https://icibm2024.iaibm.org/">International Conference on Intelligent Biology and Medicine (ICIBM 2024)</a> in Houston. Report: <a href="https://chapkinlab.tamu.edu/events-with-the-scds-core-persons/">The TREC Single Cell Data Science Core Team working and presenting</a>.
 
 10/05/2024
 Dr. Cai speaks at the 2024 Texas Taiwanese Biotechnology Association (TTBA) 10th Annual Symposium, TMC Innovation, Houston.
