@@ -1,5 +1,11 @@
 02/12/2026
-Dr. Cai gives guest lecture for ECEN 333 on "Single-Cell Transcriptomic Sequencing Data Analytics, Technologies and Applications", in ETB 1020 at 2:20 PM (the class runs from 2:20–3:35 PM).
+Dr. Cai gives guest lecture for ECEN 333 (At the Interface of Engineering and Life Sciences, organized by Dr. Raffaella Righetti) on "<a href="https://youtu.be/B7XMOWHhZYk">Single-Cell Transcriptomic Sequencing Data Analytics, Technologies and Applications</a>," in ETB 1020 at 2:20 PM (the class runs from 2:20–3:35 PM).
+
+02/11/2026
+Dr. Cai and co-PIs (Drs. Chapkin, Ning and Chou) receives the Texas A&M University Targeted Proposal Teams (TPT) award by the Office of the Vice President for Research for developing "Quantum Algorithms and Agentic AI Systems for High-Performance Analysis of Single-Cell Omics Data."
+
+02/11/2026
+Shreyan receives the Advanced Training Grant ($1,500) by the VMBS Office of Research and Graduate Studies for travel to the Gordan Research Conference.
 
 02/06/2026
 Shreyan wins the platform presentation award at the <a href="https://www.linkedin.com/posts/texas-a-m-school-of-veterinary-medicine-and-biomedical-sciences_graduateresearch-biomedicalsciences-biomedicalsciencesresearch-activity-7425585335918551041-U39K?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAKdzHkB2-RURmmpTZyJEnNvaJ_Kjw0x8dI">Annual Research & Graduate Studies Trainee Research Symposium</a>, CVMBS.
