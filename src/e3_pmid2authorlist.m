@@ -8,7 +8,7 @@ S_AU=[];
 d = dictionary;
 d2 = dictionary;
 
-for k=1:49 %length(AAv)   %Year 2020-Present
+for k=1:45  %length(AAv)   %Year 2020-Present
     pause(1)
     AAv(k)
     try
