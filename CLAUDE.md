@@ -32,7 +32,7 @@ Run both steps in sequence after any change to `ids.txt`, `news_source.txt`, `pe
 4. **`src/pmidoi/i_doi2html.m`** — fetches `https://doi.org/<DOI>`, extracts `<meta name="citation_*">` tags, returns `<li>` HTML string. Used for DOI-only entries (arXiv, bioRxiv, non-PubMed journals).
 5. **`src/paperhtml/`** — cache directory; each entry is stored as `matlab.lang.makeValidName(<id>)`. Highlighted entries and those with a matching `.wav` file are always re-fetched; others are served from cache.
 6. **`src/e1d_pmidoi2html_writemerge.m`** — orchestrates the loop, writes `src/publications.html` (debug copy) and `../publications.html` + `../selected_publications.html` (production).
-7. **`src/e2_mergefiles.m`** — reads `index_template.html` and splices in `news_aa.html` (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) at placeholder tokens to produce `../index.html`.
+7. **`src/e2_mergefiles.m`** — parses `news_source.txt` → writes `src/news_aa.html`, then splices it (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) into `index_template.html` to produce `../index.html`.
 
 ## Adding / Updating Content
 
