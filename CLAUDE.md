@@ -26,7 +26,7 @@ Run both steps in sequence after any change to `ids.txt`, `news_source.txt`, `pe
 
 ## Publication Pipeline Architecture
 
-1. **`src/ids.txt`** — master list of PMIDs and DOIs, one per line. Append `*` to mark a preprint. Order determines display order.
+1. **`src/ids.txt`** — master list of PMIDs and DOIs, one per line. Append `*` to mark a preprint (works on both PMIDs and DOIs). Order determines display order. **No duplicates allowed** — `e0_pmidoilist.m` asserts uniqueness and will abort the pipeline if a duplicate is present.
 2. **`src/e0_pmidoilist.m`** — shared setup: reads `ids.txt`, strips `*`, builds `AAv` (all IDs) and `ispreprint` mask, defines `Highlighted` (a hardcoded list of featured IDs).
 3. **`src/pmidoi/i_pmid2html.m`** — fetches PubMed record for a PMID, parses AU/TI/SO/DOI fields, returns `<li>` HTML string.
 4. **`src/pmidoi/i_doi2html.m`** — fetches `https://doi.org/<DOI>`, extracts `<meta name="citation_*">` tags, returns `<li>` HTML string. Used for DOI-only entries (arXiv, bioRxiv, non-PubMed journals).
