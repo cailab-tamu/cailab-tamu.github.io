@@ -11,7 +11,6 @@ options = weboptions( ...
     % publishers (e.g. pubs.aip.org) block non-browser clients with HTTP 403,
     % and others serve a page with no usable meta tags -- fall back to the
     % Crossref REST API, which returns the same fields for any registered DOI.
-    a = {};
     try
         a=webread(sprintf('https://doi.org/%s',s_doi), options);
         a=strtrim(strsplit(a,{'\n','/>'}))';
