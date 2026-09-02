@@ -1,3 +1,6 @@
 
 *.db
 index.html.bak
+
+# Per-machine Claude Code settings; not for publication
+.claude/
