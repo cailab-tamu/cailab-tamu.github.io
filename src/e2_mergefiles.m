@@ -1,4 +1,5 @@
-fid=fopen('news_source.txt','r');
+% fid=fopen('news_source_deleted.txt','r');
+fid=fopen('..\..\cailab-uga-private\src\news_source.txt','r');
 a=textscan(fid,'%s','Delimiter','\n');
 a=a{1};
 fclose(fid);

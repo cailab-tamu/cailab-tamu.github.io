@@ -1,5 +1,5 @@
-AAv = readlines('ids.txt',"EmptyLineRule","skip");
-
+% AAv = readlines('ids_deleted.txt',"EmptyLineRule","skip");
+AAv = readlines('..\..\cailab-uga-private\src\ids.txt',"EmptyLineRule","skip");
 assert(length(unique(AAv))==length(AAv))
 ispreprint = contains(AAv,'*');
 AAv=strrep(AAv,'*','');
