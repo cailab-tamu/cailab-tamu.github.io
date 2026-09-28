@@ -22,7 +22,7 @@ e1d_pmidoi2html_writemerge   % writes ../publications.html and ../selected_publi
 e2_mergefiles                % writes ../index.html
 ```
 
-Run both steps in sequence after any change to `ids.txt`, `news_source.txt`, `people.html`, or `index_template.html`.
+Run both steps in sequence after any change to `ids.txt`, `news_source_tamu.txt`, `people.html`, or `index_template.html`.
 
 ## Publication Pipeline Architecture
 
@@ -32,7 +32,7 @@ Run both steps in sequence after any change to `ids.txt`, `news_source.txt`, `pe
 4. **`src/pmidoi/i_doi2html.m`** — fetches `https://doi.org/<DOI>`, extracts `<meta name="citation_*">` tags, returns `<li>` HTML string. Used for DOI-only entries (arXiv, bioRxiv, non-PubMed journals).
 5. **`src/paperhtml/`** — cache directory; each entry is stored as `matlab.lang.makeValidName(<id>)`. Highlighted entries and those with a matching `.wav` file are always re-fetched; others are served from cache.
 6. **`src/e1d_pmidoi2html_writemerge.m`** — orchestrates the loop, writes `src/publications.html` (debug copy) and `../publications.html` + `../selected_publications.html` (production).
-7. **`src/e2_mergefiles.m`** — parses `news_source.txt` → writes `src/news_aa.html`, then splices it (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) into `index_template.html` to produce `../index.html`.
+7. **`src/e2_mergefiles.m`** — parses `news_source_tamu.txt` → writes `src/news_aa.html`, then splices it (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) into `index_template.html` to produce `../index.html`.
 
 ## Adding / Updating Content
 
@@ -40,7 +40,7 @@ Run both steps in sequence after any change to `ids.txt`, `news_source.txt`, `pe
 |---|---|
 | Add a new publication | Append PMID or DOI to `src/ids.txt`; re-run `e1d_pmidoi2html_writemerge` |
 | Feature a publication | Add its ID to the `Highlighted` array in `src/e0_pmidoilist.m` |
-| Add/edit news item | Edit `src/news_source.txt` (alternating date line / text line); re-run `e2_mergefiles` |
+| Add/edit news item | Edit `src/news_source_tamu.txt` (alternating date line / text line); re-run `e2_mergefiles` |
 | Edit people section | Edit `src/people.html`; re-run `e2_mergefiles` |
 | Change site layout/nav | Edit `src/index_template.html`; re-run `e2_mergefiles` |
 
