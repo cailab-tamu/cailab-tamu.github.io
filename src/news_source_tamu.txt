@@ -1,3 +1,6 @@
+10/06/2026
+Dr. Cai participates as a panelist in the AI for Quantum Science & Computing Panel (Oct 6, 3:30 PM) at the <a href="https://www.tamus.edu/ai/panels-bios/#quantum-science">Artificial Intelligence Research & Innovation Meeting</a>, organized by The Texas A&M University System, Hall of Champions, College Station. The panel is moderated by Dr. Angela Wilson (Vice President for Research, Texas A&M) and also features Drs. Dilma Da Silva and Grigory Rogachev and Tim Rogers (IonQ).
+
 08/04/2026
 Dr. Cai gives a talk titled "Quantum Computing for Single-Cell Biology: Networks, Dynamics, and Generative Models" at the <a href="https://icibm2026.iaibm.org/">ICIBM 2026</a> in Buffalo, NY.
 
