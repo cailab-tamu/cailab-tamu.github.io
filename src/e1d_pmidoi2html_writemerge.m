@@ -54,6 +54,8 @@ fclose(fid);
                            s = s + s1;
                     catch ME
                         AAv(k)
+                        % Fetch failed (e.g. rate limit): fall back to the cached entry.
+                        s = s + strrep(string(fileread(fname)), '<li class="highlighted">', '<li>');
                     end
                 else
                     fileContent = fileread(fname);
