@@ -70,6 +70,15 @@ options = weboptions( ...
             s_t=e_metacontentext(a,'citation_date');
         end
     end
+    % bioRxiv landing pages stamp preprints with a year-only placeholder
+    % (YYYY/01/01); Crossref carries the real posting date.
+    if ~isempty(s_t) && ~isempty(regexp(s_t(1), '^\d{4}/0?1/0?1$', 'once'))
+        try
+            d = e_metacontentext(e_crossrefmeta(s_doi), 'citation_publication_date');
+            if ~isempty(d), s_t = d; end
+        catch
+        end
+    end
 
     s_v=e_metacontentext(a,'citation_volume');
     s_i=e_metacontentext(a,'citation_issue');
