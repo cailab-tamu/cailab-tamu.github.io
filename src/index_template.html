@@ -31,8 +31,12 @@
 
   
   <style>
+    /* Selected papers: a pale tint and a thin accent bar, not a solid fill. */
     li.highlighted{
-        background-color: #a7c44c;
+        background-color: #f5f9ec;
+        border-left: 4px solid #a7c44c;
+        padding: 6px 10px;
+        margin: 4px 0;
     }
     li.odd{
         background-color: #72a411;
@@ -41,11 +45,17 @@
         background-color: #8eb640;
     }
     li.highlighted a {
+      color: #6b8c2a;
+    }
+    /* Publications view switcher: keep the four buttons on one row on phones. */
+    @media (max-width: 767px) {
+      .pub-views ol.type { padding: 0; }
+      .pub-views ol.type li { margin: 4px 2px; padding: 8px 0; }
+      .pub-views ol.type li a { padding: 8px 10px; font-size: 12px; letter-spacing: 0; }
+    }
+    li.highlighted a:hover, li.highlighted a:focus {
       color: #222;
     }
-    li.highlighted a:hover, a:focus {
-      color: #fff;
-    }    
   </style>
 
   <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
@@ -315,7 +325,15 @@
 
 <div class="container">
   <div class="col-xs-12">
-        
+    <div class="categories pub-views">
+      <ol class="type">
+        <li><a href="index.html#restaurant-menu" class="active">All</a></li>
+        <li><a href="publications_selected.html">Selected</a></li>
+        <li><a href="publications_by_year.html">By Year</a></li>
+        <li><a href="publications_by_topic.html">By Topic</a></li>
+      </ol>
+    </div>
+
 <<<2>>>
 
     <h3>Book Chapters</h3>

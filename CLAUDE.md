@@ -17,6 +17,7 @@ addpath('pmidoi\')
 % Step 1 – refresh publications HTML from PubMed / DOI metadata
 % (fetches live data; re-fetches highlighted entries every time)
 e1d_pmidoi2html_writemerge   % writes ../publications.html and ../selected_publications.html
+e1e_grouped_pages            % writes ../publications_selected.html, ../publications_by_year.html, ../publications_by_topic.html
 
 % Step 2 – rebuild index.html by merging template + news + publications + people
 e2_mergefiles                % writes ../index.html
@@ -32,13 +33,14 @@ Run both steps in sequence after any change to `ids.txt`, `news_source_tamu.txt`
 4. **`src/pmidoi/i_doi2html.m`** — fetches `https://doi.org/<DOI>`, extracts `<meta name="citation_*">` tags, returns `<li>` HTML string. Used for DOI-only entries (arXiv, bioRxiv, non-PubMed journals).
 5. **`src/paperhtml/`** — cache directory; each entry is stored as `matlab.lang.makeValidName(<id>)`. Highlighted entries and those with a matching `.wav` file are always re-fetched; others are served from cache.
 6. **`src/e1d_pmidoi2html_writemerge.m`** — orchestrates the loop, writes `src/publications.html` (debug copy) and `../publications.html` + `../selected_publications.html` (production).
-7. **`src/e2_mergefiles.m`** — parses `news_source_tamu.txt` → writes `src/news_aa.html`, then splices it (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) into `index_template.html` to produce `../index.html`.
+7. **`src/e1e_grouped_pages.m`** — regroups the cached `paperhtml/` entries into standalone `../publications_selected.html` (the `Highlighted` papers only), `../publications_by_year.html` and `../publications_by_topic.html`; highlighting is stripped on these pages (head, nav, footer and book chapters taken from `index_template.html`). Topics come from the shared `cailab-uga-private/src/paper_topics.txt`; unlisted papers go under "Other" with a warning.
+8. **`src/e2_mergefiles.m`** — parses `news_source_tamu.txt` → writes `src/news_aa.html`, then splices it (`<<<1>>>`), `publications.html` (`<<<2>>>`), and `people.html` (`<<<3>>>`) into `index_template.html` to produce `../index.html`.
 
 ## Adding / Updating Content
 
 | Task | What to edit |
 |---|---|
-| Add a new publication | Append PMID or DOI to `src/ids.txt`; re-run `e1d_pmidoi2html_writemerge` |
+| Add a new publication | Append PMID or DOI to `cailab-uga-private/src/ids.txt` and assign it a topic in `paper_topics.txt`; re-run `e1d_pmidoi2html_writemerge`, `e1e_grouped_pages`, `e2_mergefiles` |
 | Feature a publication | Add its ID to the `Highlighted` array in `src/e0_pmidoilist.m` |
 | Add/edit news item | Edit `src/news_source_tamu.txt` (alternating date line / text line); re-run `e2_mergefiles` |
 | Edit people section | Edit `src/people.html`; re-run `e2_mergefiles` |
