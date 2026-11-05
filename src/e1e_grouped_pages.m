@@ -146,6 +146,7 @@ end
 function sections = groupByTopic(ids)
 %GROUPBYTOPIC One section per topic in paper_topics.txt, in file order; newest first within.
     [topics, topicOf] = readPaperTopics();
+    warnStaleTopicIds(topicOf, ids);
     years = arrayfun(@paperYear, ids);
     years(isnan(years)) = 0;
     [~, order] = sort(years, 'descend');   % stable: keeps ids.txt order within a year
@@ -164,6 +165,19 @@ function sections = groupByTopic(ids)
     if any(~assigned)
         warning('Not in paper_topics.txt, listed under "Other": %s', join(ids(~assigned), ", "));
         sections(end+1) = makeSection("Other", "t-other", ids(~assigned));
+    end
+end
+
+
+function warnStaleTopicIds(topicOf, ids)
+%WARNSTALETOPICIDS Warn about paper_topics.txt entries that are not in ids.txt.
+%   Usually a preprint whose ID the PubMed monitor replaced with the
+%   published version's: the published paper then lands in "Other" and
+%   the old preprint line should be updated to the new ID.
+    if numEntries(topicOf) == 0, return; end
+    stale = setdiff(keys(topicOf), ids);
+    if ~isempty(stale)
+        warning('In paper_topics.txt but not in ids.txt (update or remove): %s', join(stale, ", "));
     end
 end
 
