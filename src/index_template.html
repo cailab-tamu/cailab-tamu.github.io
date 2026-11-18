@@ -589,6 +589,64 @@
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+
+  <!-- Moving-to-UGA notice -->
+  <style>
+    #uga-move-dialog {
+      max-width: 440px; width: calc(100% - 32px); padding: 28px 28px 24px;
+      border: none; border-radius: 10px; box-shadow: 0 12px 40px rgba(0,0,0,.25);
+      font-family: 'Open Sans', sans-serif; color: #333; text-align: center;
+    }
+    #uga-move-dialog::backdrop { background: rgba(0,0,0,.45); }
+    #uga-move-dialog h3 { margin: 0 0 12px; font-family: 'Raleway', sans-serif; font-weight: 700; color: #333; }
+    #uga-move-dialog p { margin: 0 0 22px; font-size: 15px; line-height: 1.6; }
+    #uga-move-dialog p.uga-move-countdown { margin: 16px 0 0; font-size: 13px; color: #777; }
+    #uga-move-dialog .uga-move-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    #uga-move-dialog button, #uga-move-dialog a.uga-move-go {
+      padding: 10px 22px; border-radius: 6px; font-size: 15px; font-weight: 600;
+      cursor: pointer; text-decoration: none; border: 2px solid #72a411;
+    }
+    #uga-move-dialog button { background: #fff; color: #6b8c2a; }
+    #uga-move-dialog button:hover { background: #f5f9ec; }
+    #uga-move-dialog a.uga-move-go { background: #72a411; color: #fff; }
+    #uga-move-dialog a.uga-move-go:hover { background: #8eb640; border-color: #8eb640; }
+  </style>
+  <dialog id="uga-move-dialog" aria-labelledby="uga-move-title">
+    <h3 id="uga-move-title">The Cai Lab is moving to UGA</h3>
+    <p>In January 2027, the Cai Lab will relocate from Texas A&amp;M to the University of Georgia.
+      Visit our new site for the latest news, research, and open positions.</p>
+    <div class="uga-move-actions">
+      <button type="button" id="uga-move-stay">Stay</button>
+      <a class="uga-move-go" href="https://cailab-uga.github.io/">Go to Cai Lab UGA site</a>
+    </div>
+    <p class="uga-move-countdown" aria-live="polite">Redirecting to the UGA site in <span id="uga-move-seconds">15</span>&nbsp;s&hellip;</p>
+  </dialog>
+  <script>
+    (function () {
+      var dlg = document.getElementById('uga-move-dialog');
+      if (!dlg || typeof dlg.showModal !== 'function') { return; }
+      var KEY = 'ugaMoveNoticeDismissed';
+      try { if (sessionStorage.getItem(KEY)) { return; } } catch (e) {}
+      var URL = 'https://cailab-uga.github.io/';
+      var secondsLeft = 15;
+      var secondsEl = document.getElementById('uga-move-seconds');
+      var timer = null;
+      document.getElementById('uga-move-stay').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('close', function () {
+        clearInterval(timer);
+        try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      });
+      dlg.showModal();
+      timer = setInterval(function () {
+        secondsLeft -= 1;
+        secondsEl.textContent = secondsLeft;
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = URL;
+        }
+      }, 1000);
+    })();
+  </script>
 </body>
 
 </html>
